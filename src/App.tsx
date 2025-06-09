@@ -6,17 +6,18 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 
-
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        {/* 로그인 페이지 - Layout 없음 */}
+        <Route path="/login" element={<Login />} />
 
-        <Route path="/home" element={<Layout />}>
-          <Route index element={<Home />} />
-          {/* 절대경로 /about 대신 상대경로 about 사용 */}
-          <Route path="about" element={<About />} />
+        {/* 메인 애플리케이션 - Layout 있음 */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} /> {/* / */}
+          <Route path="home" element={<Home />} /> {/* /home */}
+          <Route path="about" element={<About />} /> {/* /about */}
         </Route>
       </Routes>
     </Router>
