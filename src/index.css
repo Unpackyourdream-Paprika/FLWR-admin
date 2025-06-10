@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 body {
@@ -61,9 +61,20 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  outline: none;
+
+  /* 포커스 시에도 아웃라인 제거 */
+  &:focus {
+    outline: none;
+  }
+
+  /* 클릭 시 활성 상태 스타일 */
+  &:active {
+    outline: none;
+  }
 }
 button:hover {
- cursor:pointer;
+  cursor: pointer;
 }
 button:focus,
 button:focus-visible {

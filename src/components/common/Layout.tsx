@@ -17,8 +17,8 @@ export default function Layout() {
         <SideNavButton />
         <MainContentStyled>
           <Outlet />
-          <Footer />
         </MainContentStyled>
+        <Footer />
       </LayoutInner>
     </LayoutWrapper>
   );
