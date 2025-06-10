@@ -12,13 +12,13 @@ export default function Layout() {
   return (
     <LayoutWrapper>
       <Header />
-      <LayoutInner className="main-content">
+      <LayoutInner>
         <SideNav />
         <SideNavButton />
         <MainContentStyled>
           <Outlet />
-          <Footer />
         </MainContentStyled>
+        <Footer />
       </LayoutInner>
     </LayoutWrapper>
   );

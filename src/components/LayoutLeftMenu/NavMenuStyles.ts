@@ -37,7 +37,8 @@ export const NavItemHeader = styled.div<{
 // 네비게이션 제목과 알림 영역
 export const NavItemTitle = styled.div`
   display: flex;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   gap: 8px;
 `;
 
@@ -54,6 +55,7 @@ export const NavNotificationBadge = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 3px;
 `;
 
 // 드롭다운 화살표 아이콘
