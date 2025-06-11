@@ -10,7 +10,6 @@ import {
   NavDropdownIcon,
   NavSubMenuContainer,
   NavSubMenuItem,
-  NavSubItemBadge,
 } from "./NavMenuStyles";
 import type { NavMenuItem, NavSubItem } from "../../types/nav.types";
 
@@ -18,14 +17,12 @@ interface NavItemProps {
   item: NavMenuItem;
   isOpen: boolean;
   onToggle: (id: string) => void;
-  activeSubItemId?: string;
 }
 
 export const NavItem = ({
   item,
   isOpen,
   onToggle,
-  activeSubItemId,
 }: NavItemProps) => {
   const navigate = useNavigate();
 
@@ -78,7 +75,7 @@ export const NavItem = ({
           {item.subItems?.map((subItem) => (
             <NavSubMenuItem
               key={subItem.id}
-              isActive={subItem.isActive || activeSubItemId === subItem.id}
+              isActive={Boolean(subItem.path && window.location.pathname === subItem.path)}
               onClick={() => handleSubItemClick(subItem)}
             >
               {subItem.label}
@@ -96,12 +93,10 @@ export const NavItem = ({
 
 interface NavigationMenuProps {
   menuData: NavMenuItem[];
-  activeSubItemId?: string;
 }
 
 export const NavigationMenu: React.FC<NavigationMenuProps> = ({
   menuData,
-  activeSubItemId,
 }) => {
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
 
@@ -118,7 +113,6 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
           item={item}
           isOpen={openMenuId === item.id}
           onToggle={handleToggle}
-          activeSubItemId={activeSubItemId}
         />
       ))}
     </NavMenuContainer>

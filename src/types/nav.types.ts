@@ -37,7 +37,6 @@ export const NAV_MENU_DATA: NavMenuItem[] = [
         id: "seoul-logistics",
         label: "서울 수량대기",
         path: "/sales/seoul-logistics",
-        isActive: true, // 현재 활성화된 페이지
       },
       {
         id: "purchase-confirmation",

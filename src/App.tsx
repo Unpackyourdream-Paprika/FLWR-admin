@@ -21,6 +21,7 @@ import DeliveryManagement from "./pages/DeliveryManagement/DeliveryManagement";
 import PurchaseConfirmation from "./pages/PurchaseConfirmation/PurchaseConfirmation";
 import OrderSearch from "./pages/OrderSearch/OrderSearch";
 import SeoulLogistics from "./pages/SeoulLogistics/SeoulLogistics";
+import ProductManagement from "./pages/ProductManagement";
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
           <Route path="about" element={<About />} /> {/* /about */}
           <Route path="sales/order-search" element={<OrderSearch />} />
           <Route path="sales/seoul-logistics" element={<SeoulLogistics />} />
+          <Route
+            path="product-management"
+            element={<ProductManagement />}
+          />
           <Route
             path="sales/purchase-confirmation"
             element={<PurchaseConfirmation />}

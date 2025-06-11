@@ -20,12 +20,6 @@ import {
 } from "./SideNavStyled";
 import { IoChevronDown, IoSearch } from "react-icons/io5";
 
-interface DropdownProps {
-  title: string;
-  children: React.ReactNode;
-  defaultOpen?: boolean;
-}
-
 import DonkiFace from "/Layout/donki.jpg";
 import { useState } from "react";
 import { NavigationMenu } from "../LayoutLeftMenu/NavigationMenu";
@@ -128,7 +122,6 @@ export default function SideNav() {
         <SideNavInnerBottomWrapper>
           <NavigationMenu
             menuData={NAV_MENU_DATA}
-            activeSubItemId="seoul-logistics" // 현재 활성화된 서브메뉴 ID
           />
         </SideNavInnerBottomWrapper>
       </SideNavInner>

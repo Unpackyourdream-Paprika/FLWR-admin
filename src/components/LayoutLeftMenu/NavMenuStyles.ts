@@ -75,7 +75,7 @@ export const NavSubMenuContainer = styled.div<{
 }>`
   position: relative;
 
-  height: ${(props) => (props.isOpen ? `${props.itemCount * 40 + 8}px` : "0")};
+  height: ${(props) => (props.isOpen ? `${props.itemCount * 43.5}px` : "0")};
   overflow: hidden;
   transition: height 0.3s ease;
   background-color: #3a4349;
@@ -86,6 +86,7 @@ export const NavSubMenuContainer = styled.div<{
 // 서브메뉴 아이템
 export const NavSubMenuItem = styled.div<{ isActive?: boolean }>`
   padding: 12px;
+  box-sizing: border-box;
   color: ${(props) => (props.isActive ? "#4caf50" : "#ccc")};
   cursor: pointer;
   font-size: 13px;
