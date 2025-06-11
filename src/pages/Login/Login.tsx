@@ -8,8 +8,6 @@ import {
   Label,
   Input,
   SubmitButton,
-  SocialContainer,
-  SocialButton,
   ErrorMessage,
   ResponsiveWrapper,
 } from "./LoginStyled";

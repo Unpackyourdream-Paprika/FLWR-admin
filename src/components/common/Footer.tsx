@@ -13,7 +13,6 @@ import {
   FooterCopyright,
   NaverLogo,
   SpecialLink,
-  CertificationMark,
 } from "./FooterStyled";
 
 export default function Footer() {

@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
 
-interface SideNavButtonProps {}
-
-export default function SideNavButton({}: SideNavButtonProps) {
+export default function SideNavButton() {
   return (
     <NavActiveButton>
       <IoIosArrowBack size={12}  />

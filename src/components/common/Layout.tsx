@@ -3,12 +3,9 @@ import Header from "./Header";
 import { LayoutWrapper, LayoutInner, MainContentStyled } from "./LayoutStyled";
 import SideNav from "./SideNav";
 import SideNavButton from "./SideNavButton";
-import { useState } from "react";
 import Footer from "./Footer";
 
 export default function Layout() {
-  const [isHidden, setIsHidden] = useState(false);
-
   return (
     <LayoutWrapper>
       <Header />
